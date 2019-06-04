@@ -2,13 +2,27 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>PROYECTO</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div id="root">
-      <h1>Hola mundo!</h1>
-    </div>
+    <title>Proyecto cipher</title>
+    <h1>Police TOOL</h1>
+    <p>Introduce tu texto aqui</p>
+    <input id="entrada" onkeyup="escribir2()">
+<div id="cont3"></div>
+<script>
+function escribir2() {
+valor = document.getElementById('entrada').value;
+document.getElementById('cont3').innerHTML=' '+valor;} 
+</script>
+    <div id="seleccion">
+      <button id="tema-a" class="boton" onClick="mostrar_a()">Codificar</button>
+      <button id="tema-b" class="boton" onClick="mostrar_b()">Descodificar</button>
+      <div id="numero de codificacion">
+    <input type="number" id="number_codification" oninput="poner_numero()">
+    <h2 id="number"></h2>
+    </div>  
+      </div>  
+    <img id="police_siren" src="https://www.lequzhai.com/data/out/12/497129.gif">
+    <script type="text/javascript" src="app.js">
+    </script>
     <script src="cipher.js"></script>
     <script src="index.js"></script>
   </body>
