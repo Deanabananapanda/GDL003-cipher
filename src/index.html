@@ -1,10 +1,15 @@
 <!DOCTYPE html>
-<html>
+<html charset="UTF-8">
 <head>
-  <body></body>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="scripts.js"></script>
+
+  <body>
 <title>Cipher</title>
-  <h1>¡Messages Lovers!</h1>
+  <h1>¡CHAT LOVER!</h1>
   <link href="http://bioslimips.com/images/redes-sociales.png">
+  <link type="text/css" rel="stylesheet" href="style.css" />
   <h1>¡HEY!... <p style="font-size:23px">&#128520;</p> Bienvenidos al chat que te permite escribir y desifrar de manera original, divertida y privada...
   </h1>
   <img id="fire" src="https://media3.giphy.com/media/26BRt5hkD6hLzTl3q/source.gif">
@@ -12,36 +17,32 @@
 <p>Vamos a chatear &#128540;</p>
 <p>Lovers &#128536;</p>
 <link type="text/css" rel="stylesheet" href="style.css" />
-
+  
   <img id="chat_person" src="http://static.betazeta.com/www.fayerwayer.com/up/2014/01/sadf.gif.gif">
 </head>
- 
-<div id="wrapper">
-  <div id="menu">
-        <p class="Introduce tu mensaje">Hot Chat, <b> online</b></p>
-     <p>Recuerda que tu texto debera ser escrito solo en mayusculas:</p>
-        <p class="logout"><a id="exit" href="#">Salir Chat</a></p>
-        <div style="clear:both"></div>
-    </div>
-     <input id="entrada" onkeyup="escribir2()">
-<div id="cont3"></div>
-<script>
-function escribir2() {
-valor = document.getElementById('entrada').value;
-document.getElementById('cont3').innerHTML=' '+valor;} 
-</script>
-    <div id="seleccion">
-      <button id="tema-a" class="boton" onClick="mostrar_a()">Codificar</button>
-      <button id="tema-b" class="boton" onClick="mostrar_b()">Descodificar</button>
-      <p>Intruduzca los mov.</p>
-      <div id="numero de codificacion">
-    <input type="number" id="number_codification" oninput="poner_numero()">
-    <h2 id="number"></h2>
-    </div>  
-<script type="text/javascript">
-$(document).ready(function(){
- 
-});
-</script>
-</body>
+
+        <div id="menu">
+              <p class="welcome">Chat ONLINE <b></b></p>
+              <p class="logout"><a id="exit" href="#" onClick="history.go(0)" VALUE="Refresh">Reiniciar el Chat</a></p>
+          <div id="chatbox"></div>
+           
+          <input type="text" id="usermsg" size="67" />
+          <button type = "button" onclick="code();">Codificar</button>
+          <button type = "button" onclick="decode();">Decodificar</button>
+              <label>Code/Decode</label>
+              <select id="mySelect">
+                  <option value = "2">2</option>
+                  <option value = "3">3</option>
+                  <option value = "4">4</option>
+                  <option value = "5">5</option>
+                  <option value = "6">6</option>
+                  <option value = "7">7</option>
+                  <option value = "8">8</option>
+                  <option value = "9">9</option>
+                  <option value = "10">10</option>
+                  <option value = "11">11</option>
+                  <option value = "12">12</option>
+              </select>
+
+            </body>
 </html>
