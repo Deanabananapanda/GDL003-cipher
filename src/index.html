@@ -3,11 +3,12 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="scripts.js"></script>
+    <script src="index.js"></script>
 
   <body>
 <title>Cipher</title>
   <h1>¡CHAT LOVER!</h1>
+   
   <link href="http://bioslimips.com/images/redes-sociales.png">
   <link type="text/css" rel="stylesheet" href="style.css" />
   <h1>¡HEY!... <p style="font-size:23px">&#128520;</p> Bienvenidos al chat que te permite escribir y desifrar de manera original, divertida y privada...
@@ -20,15 +21,17 @@
   
   <img id="chat_person" src="http://static.betazeta.com/www.fayerwayer.com/up/2014/01/sadf.gif.gif">
 </head>
-
+    <div id="wrapper">
         <div id="menu">
               <p class="welcome">Chat ONLINE <b></b></p>
-              <p class="logout"><a id="exit" href="#" onclick="history.go(0)" value="Refresh">Reiniciar el Chat</a></p>
-          <div id="chatbox"></div>
+              <p class="logout"><a id="exit" href="#" onclick="history.go(0)" VALUE="Refresh">Reiniciar del Chat</a></p>
+          </div>
            
+          <div id="chatbox"></div>
           <input type="text" id="usermsg" size="67" />
           <button type = "button" onclick="code();">Codificar</button>
           <button type = "button" onclick="decode();">Decodificar</button>
+          <div>
               <label>Code/Decode</label>
               <select id="mySelect">
                   <option value = "2">2</option>
@@ -43,6 +46,7 @@
                   <option value = "11">11</option>
                   <option value = "12">12</option>
               </select>
-
-            </body>
+          </div>
+      </div>
+</body>
 </html>

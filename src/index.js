@@ -1,50 +1,56 @@
-  var codificar = function(){
-  var texto = 
-  document.getElementById("usermsg").value;
-  var asciis = texto.charCodeAt(0)+2;
-  var texto2 = String.fromCharCode(asciis);
-  alert(texto.length);
-}
-
-var code = function(text){
-  var text =
-  document.getElementById("usermsg").value;
-  var text2 = ""; 
-  var coder = 
-  document.getElementById("mySelect").selectedIndex+2;
- 
-  for (i = 0; i < text.length; i++){
-      if (text.charCodeAt(i)==32){
-          text2 =
-          text2+String.fromCharCode(text.charCodeAt(i));  
-      }else{
-          text2 = 
-          text2+String.fromCharCode(text.charCodeAt(i)+coder);
-      }        
-  }
-
-  var chatb = 
-  document.getElementById("chatbox");
-  chatb.innerHTML = chatb.innerHTML+text2+"</br>";
-}
-
-
-var decode = function(text){
-  var text = 
-  document.getElementById("usermsg").value;
-  var text2 = ""; 
-  var coder = document.getElementById("mySelect").selectedIndex+2;
+const codificar=()=>{
+    let texto = document.getElementById("usermsg").value;
+    let asciis = texto.charCodeAt(0)+2;
+    let texto2 = String.fromCharCode(asciis);
+    alert(texto.length);
+  };
   
-  for (i = 0; i < text.length; i++){
-      if (text.charCodeAt(i)==32){
-          text2 = 
-          text2+String.fromCharCode(text.charCodeAt(i));  
-      }else{
-          text2 = text2+String.fromCharCode(text.charCodeAt(i)-coder);
-      }        
-  }
- 
-  var chatb = 
-  document.getElementById("chatbox");
-  chatb.innerHTML = chatb.innerHTML+text2+"</br>";
-}
+  const code=()=>{
+    let text = document.getElementById("usermsg").value;
+    let text2 = ""; 
+    let coder = document.getElementById("mySelect").selectedIndex+2;
+    let i;
+   
+    for (i = 0; i < text.length; i++){
+        if (text.charCodeAt(i)==32){
+         
+            text2+String.fromCharCode(text.charCodeAt(i));  
+        }else{
+            
+            text2+String.fromCharCode(text.charCodeAt(i)+coder);
+        }        
+    }
+  
+    let chatb = document.getElementById("chatbox");
+    chatb.innerHTML = chatb.innerHTML+text2+"</br>";
+  };
+  
+  
+  const decode=()=>{
+    let text = 
+    document.getElementById("usermsg").value;
+    let text2 = ""; 
+    let coder = document.getElementById("mySelect").selectedIndex+2;
+    let i;
+    for (i = 0; i< text.length; i++){
+        if (text.charCodeAt(i)==32){
+            text2 = i;
+            text2+String.fromCharCode(text.charCodeAt(i));  
+        }else{
+            text2 = text2+String.fromCharCode(text.charCodeAt(i)-coder);
+        }    
+    }
+   
+    let chatb = document.getElementById("chatbox");
+    chatb.innerHTML = chatb.innerHTML+text2+"</br>";
+  };
+
+  let botonCodificar;
+  botonCodificar = document.getElementById("code");
+  botonCodificar.addEventListener("click",Codificar);
+
+  let botonDecodificar;
+  botonDecodificar = document.getElementById("decode");
+  botonDecodificar.addEventListener("click",Decodificar);
+
+  
